@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>{{ site.title | default: site.github.repository_name }}</h1>
+        {% if site.logo %}
+          <img src="{{site.logo | relative_url}}" alt="Logo" />
+        {% endif %}
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
+        <hr>
+        
+        <a href="{{ site.url }}/index.html">Home</a><br>
+        <a href="{{ site.url }}/cv.html">CV</a><br>
+        <a href="{{ site.url }}/gallery.html">Gallery</a><br>
+        <a href="{{ site.url }}/showreel.html">Showreel</a><br>
+        <a href="{{ site.url }}/contact.html">Contact</a><br>
+        
+        {% if site.posts.size != 0 %}
+          <u>Posts</u><br>
+          {% for post in site.posts %}
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          {% endfor %}
+        {% endif %}
+      </header>
+      
+      <section>
+      {{ content }}
+      </section>
+      
+      <footer>
+        <p>
+          <center>
+          <a href="https://www.facebook.com/profile.php?id=100070380875860">
+          <img src="/assets/images/icons/facebook.svg" alt="Facebook" width="28" style="padding: 10px"></a>
+          <a href="https://www.instagram.com/iamkavitakaur/">
+          <img src="/assets/images/icons/instagram.svg" alt="Instagram" width="28" style="padding: 10px"></a>
+          <a href="https://www.youtube.com/channel/UCbFoy5KzATlInEUxH5oMBsQ/featured">
+          <img src="/assets/images/icons/youtube.svg" alt="Youtube" width="28" style="padding: 10px"></a>
+          <a href="mailto:kavitakaur1@yahoo.com">
+          <img src="/assets/images/icons/mail.svg" alt="Email" width="24" style="padding: 10px"></a>
+          </center>
+        </p>
+      </footer>
+    </div>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+  </body>
+</html>
